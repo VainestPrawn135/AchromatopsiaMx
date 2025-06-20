@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bulma CSS Template</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .hero-body .title {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero-body .subtitle {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .slideshow {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slide.is-active {
+            opacity: 1;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slide .hero {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <strong>HOME</strong>
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#band">BAND</a>
+                <a class="navbar-item" href="#tour">TOUR</a>
+                <a class="navbar-item" href="#contact">CONTACT</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">MORE</a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item">Merchandise</a>
+                        <a class="navbar-item">Extras</a>
+                        <a class="navbar-item">Media</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input is-rounded" type="text" placeholder="Search">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div style="margin-top: 52px;">
+
+        <div class="slideshow">
+            <div class="slide is-active">
+                <img src="https://www.w3schools.com/w3images/la.jpg">
+                <div class="hero is-fullheight">
+                    <div class="hero-body">
+                        <div class="container has-text-centered">
+                            <h1 class="title is-1 has-text-white">Los Angeles</h1>
+                            <h2 class="subtitle is-3 has-text-white">We had the best time playing at Venice Beach!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://www.w3schools.com/w3images/ny.jpg">
+                <div class="hero is-fullheight">
+                    <div class="hero-body">
+                        <div class="container has-text-centered">
+                            <h1 class="title is-1 has-text-white">New York</h1>
+                            <h2 class="subtitle is-3 has-text-white">The atmosphere in New York is lorem ipsum.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://www.w3schools.com/w3images/chicago.jpg">
+                <div class="hero is-fullheight">
+                    <div class="hero-body">
+                        <div class="container has-text-centered">
+                            <h1 class="title is-1 has-text-white">Chicago</h1>
+                            <h2 class="subtitle is-3 has-text-white">Thank you, Chicago - A night we won't forget.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="section" id="band">
+            <div class="container has-text-centered">
+                <h2 class="title is-2">THE BAND</h2>
+                <p class="subtitle is-4 has-text-grey"><i>We love music</i></p>
+                <p class="has-text-justified">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="columns is-centered is-vcentered mt-5">
+                    <div class="column is-one-third">
+                        <p class="title is-4">Name</p>
+                        <figure class="image is-128x128 is-inline-block">
+                            <img class="is-rounded" src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Random Name">
+                        </figure>
+                    </div>
+                    <div class="column is-one-third">
+                        <p class="title is-4">Name</p>
+                        <figure class="image is-128x128 is-inline-block">
+                            <img class="is-rounded" src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Random Name">
+                        </figure>
+                    </div>
+                    <div class="column is-one-third">
+                        <p class="title is-4">Name</p>
+                        <figure class="image is-128x128 is-inline-block">
+                            <img class="is-rounded" src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Random Name">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section has-background-black has-text-white" id="tour">
+            <div class="container">
+                <h2 class="title is-2 has-text-centered has-text-white">TOUR DATES</h2>
+                <p class="subtitle is-4 has-text-centered has-text-grey-light"><i>Remember to book your tickets!</i></p>
+                <div class="box">
+                    <ul>
+                        <li class="p-4 has-text-grey-darker">September <span class="tag is-danger is-pulled-right">Sold out</span></li>
+                        <li class="p-4 has-text-grey-darker">October <span class="tag is-danger is-pulled-right">Sold out</span></li>
+                        <li class="p-4 has-text-grey-darker">November <span class="tag is-primary is-pulled-right">3</span></li>
+                    </ul>
+                </div>
+                <div class="columns mt-5">
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="New York">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">New York</p>
+                                <p class="subtitle is-6 has-text-grey">Fri 27 Nov 2016</p>
+                                <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="button is-black mt-3 modal-button" data-target="ticketModal">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://www.w3schools.com/w3images/paris.jpg" alt="Paris">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">Paris</p>
+                                <p class="subtitle is-6 has-text-grey">Sat 28 Nov 2016</p>
+                                <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="button is-black mt-3 modal-button" data-target="ticketModal">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="San Francisco">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">San Francisco</p>
+                                <p class="subtitle is-6 has-text-grey">Sun 29 Nov 2016</p>
+                                <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="button is-black mt-3 modal-button" data-target="ticketModal">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="ticketModal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head has-background-teal">
+                    <p class="modal-card-title has-text-white"><i class="fas fa-suitcase mr-3"></i>Tickets</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="field">
+                        <label class="label"><i class="fas fa-shopping-cart"></i> Tickets, $15 per person</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="How many?">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="fas fa-user"></i> Send To</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter email">
+                        </div>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success">PAY <i class="fas fa-check ml-2"></i></button>
+                    <button class="button is-danger modal-close">Close</button>
+                    <p class="is-pulled-right">Need <a href="#">help?</a></p>
+                </footer>
+            </div>
+        </div>
+
+
+        <section class="section" id="contact">
+            <div class="container">
+                <h2 class="title is-2 has-text-centered">CONTACT</h2>
+                <p class="subtitle is-4 has-text-centered has-text-grey"><i>Fan? Drop a note!</i></p>
+                <div class="columns">
+                    <div class="column is-half">
+                        <p><i class="fas fa-map-marker-alt" style="width:30px"></i> Chicago, US</p>
+                        <p><i class="fas fa-phone" style="width:30px"></i> Phone: +00 151515</p>
+                        <p><i class="fas fa-envelope" style="width:30px"></i> Email: mail@mail.com</p>
+                    </div>
+                    <div class="column is-half">
+                        <form action="/action_page.php" target="_blank">
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control">
+                                            <input class="input" type="text" placeholder="Name" required name="Name">
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="control">
+                                            <input class="input" type="email" placeholder="Email" required name="Email">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <p class="control">
+                                    <textarea class="textarea" placeholder="Message" required name="Message"></textarea>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control">
+                                    <button class="button is-black is-pulled-right" type="submit">SEND</button>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <figure class="image">
+        <img src="https://www.w3schools.com/w3images/map.jpg" alt="Map">
+    </figure>
+
+    <footer class="footer has-background-light">
+        <div class="content has-text-centered">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-official"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-snapchat"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>Powered by <a href="https://bulma.io/" target="_blank">Bulma</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Navbar burger
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+
+            // Automatic Slideshow
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                const slides = document.querySelectorAll('.slide');
+                slides.forEach(slide => {
+                    slide.classList.remove('is-active');
+                });
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                slides[slideIndex - 1].classList.add('is-active');
+                setTimeout(showSlides, 4000);
+            }
+
+            // Modals
+            const modalButtons = document.querySelectorAll('.modal-button');
+            const modalCloses = document.querySelectorAll('.modal-background, .delete, .modal-close');
+
+            modalButtons.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = document.getElementById(el.dataset.target);
+                    target.classList.add('is-active');
+                });
+            });
+
+            modalCloses.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.closest('.modal');
+                    target.classList.remove('is-active');
+                });
+            });
+
+            document.addEventListener('keydown', (event) => {
+                const e = event || window.event;
+                if (e.keyCode === 27) {
+                    const modals = document.querySelectorAll('.modal');
+                    modals.forEach(modal => {
+                        modal.classList.remove('is-active');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
